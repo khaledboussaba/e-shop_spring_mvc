@@ -3,21 +3,36 @@ package fr.e.shop.entities;
 import java.io.Serializable;
 import java.util.Collection;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user")
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_client")
 	private Long idUser;
-	private String username;
+	@Column(name = "username")
+	private String userName;
 	private String password;
 	private boolean actived;
+	@OneToMany(mappedBy = "user")
 	private Collection<Role> roles;
 
 	public User() {
 	}
 
-	public User(String username, String password, boolean actived) {
+	public User(String userName, String password, boolean actived) {
 		super();
-		this.username = username;
+		this.userName = userName;
 		this.password = password;
 		this.actived = actived;
 	}
@@ -30,12 +45,13 @@ public class User implements Serializable {
 		this.idUser = idUser;
 	}
 
-	public String getUsername() {
-		return username;
+	
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
