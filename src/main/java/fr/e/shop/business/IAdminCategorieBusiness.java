@@ -13,5 +13,4 @@ public interface IAdminCategorieBusiness extends IAdminProduitBusiness {
 	public void ajouterUser(User user);
 	public void attribuerRole(Role role, Long idUser);
 	
-	
 }
