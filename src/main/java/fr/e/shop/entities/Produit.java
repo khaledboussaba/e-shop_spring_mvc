@@ -23,8 +23,6 @@ public class Produit implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_produit")
 	private Long idProduit;
-	@Column(name = "nom_produit")
-	private String nomProduit;
 	@NotEmpty
 	@Size(min = 4, max = 15)
 	private String designation;
@@ -41,10 +39,9 @@ public class Produit implements Serializable {
 		super();
 	}
 
-	public Produit(String nomProduit, String designation, String description, double prix, int quantite,
+	public Produit(String designation, String description, double prix, int quantite,
 			boolean selected, String photo) {
 		super();
-		this.nomProduit = nomProduit;
 		this.designation = designation;
 		this.description = description;
 		this.prix = prix;
@@ -59,14 +56,6 @@ public class Produit implements Serializable {
 
 	public void setIdProduit(Long idProduit) {
 		this.idProduit = idProduit;
-	}
-
-	public String getNomProduit() {
-		return nomProduit;
-	}
-
-	public void setNomProduit(String nomProduit) {
-		this.nomProduit = nomProduit;
 	}
 
 	public String getDesignation() {

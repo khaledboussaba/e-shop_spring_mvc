@@ -37,5 +37,10 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	
 	<context:annotation-config></context:annotation-config>
+	
+	<bean id="dao" class="fr.e.shop.dao.ShopDaoImpl"></bean>
+	<bean id="business" class="fr.e.shop.business.ShopBusinessImpl">
+		<property name="dao" ref="dao"></property>
+	</bean>
 
 </beans>
