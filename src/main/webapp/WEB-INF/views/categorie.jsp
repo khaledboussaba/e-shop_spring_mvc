@@ -1,3 +1,4 @@
+<%@page import="java.io.Console"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
 
@@ -8,7 +9,9 @@
 <div class="errors">
 	${exception }
 </div>
-
+<div>
+	
+</div>
 <h1>Add Category</h1>
 <div id="formCat" class="cadre">
 	<f:form modelAttribute="categorie" action="saveCat" method="post" enctype="multipart/form-data">

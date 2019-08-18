@@ -1,0 +1,4 @@
+INSERT INTO `categorie` (`nom_categorie`, `description`, `photo`, `nom_photo`) VALUES ('Ordinateurs', 'Tous les ordinateurs', LOAD_FILE('C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\pc.png'), 'pc.png');
+INSERT INTO `categorie` (`nom_categorie`, `description`, `photo`, `nom_photo`) VALUES ('Téléphones', 'Tous les téléphones', LOAD_FILE('C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\phone.png'), 'phone.png');
+INSERT INTO `categorie` (`nom_categorie`, `description`, `photo`, `nom_photo`) VALUES ('Imprimantes', 'Toutes les imprimantes', LOAD_FILE('C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\printer.png'), 'printer.png');
+INSERT INTO `categorie` (`nom_categorie`, `description`, `photo`, `nom_photo`) VALUES ('Téléviseurs', 'Tous les téléviseurs', LOAD_FILE('C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\tv.png'), 'tv.png');
